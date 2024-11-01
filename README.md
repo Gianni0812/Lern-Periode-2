@@ -13,7 +13,7 @@ Heute habe ich meine Ziele vollständig erreicht. Mein Programm kann jetzt denn 
 - [ ] Programmieren, dass der User einen Buchstaben eingeben kann und wenn er richtig ist er hin geschrieben wird, wenn falsch ein versuch abgezogen wird.
 - [ ] Programmieren, dass man für jedes richtige Wort einen Punkt bekommt. 
 - [ ] Das der Hiscore wie die Punkte nachoben geht und er gespeichert wird falls das Programm geschlossen wird.
-- [ ] Ein Hangman ein blenden, das bei jedem fehler sich aufbaut.
+- [ ] Ein Hangman einblenden, das bei jedem fehler sich aufbaut.
       
 ✍️ Heute habe ich... (50-100 Wörter)
 
