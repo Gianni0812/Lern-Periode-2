@@ -10,10 +10,18 @@ Ich möchte ein Hangman spiel Programmieren, mit verschiedenen Schwierigkeitsstu
 Heute habe ich meine Ziele vollständig erreicht. Mein Programm kann jetzt denn Schwierigkeitsgrad abfragen und ein Zufälliges Wort aus dem array aussuchen. Ich habe auch schon einwenig weiter gemacht und das Wort kann man jetzt auch als striche ausgeben, so das man nicht sieht was für ein Wort es gibt.
 
 ## 1.11
-- [ ] Programmieren, dass der User einen Buchstaben eingeben kann und wenn er richtig ist er hin geschrieben wird, wenn falsch ein versuch abgezogen wird.
-- [ ] Programmieren, dass man für jedes richtige Wort einen Punkt bekommt. 
+- [x] Programmieren, dass der User einen Buchstaben eingeben kann und wenn er richtig ist er hin geschrieben wird, wenn falsch ein versuch abgezogen wird.
+- [x] Programmieren, dass man für jedes richtige Wort einen Punkt bekommt. 
 - [ ] Das der Hiscore wie die Punkte nachoben geht und er gespeichert wird falls das Programm geschlossen wird.
-- [ ] Ein Hangman einblenden, das bei jedem fehler sich aufbaut.
+- [x] Ein Hangman einblenden, das bei jedem fehler sich aufbaut.
+
+Ich habe Heute viel geschaft. Mein Programm läuft und man kann es relativ gut spielen. An manchen Funtionen gibt es noch kleine probleme die ich umbedingt verbessern muss. Aber ich habe heute fast alle Arbeitspakete fertig gemacht.
+
+## 8.11
+- [ ] Fehler beheben, dass wenn ich ein wort richtig hebe nicht immer das gleiche wieder kommt sondern ein neues.
+- [ ] Denn Highscore im Programm speichern, so dass wenn das Programm geschlossen wird, das der highscore trotzdem bleibt.
+- [ ] Variablen besser bennennen
+- [ ] Das Programm besser gestallten. (Unnötige Funktionen löschen)
       
 ✍️ Heute habe ich... (50-100 Wörter)
 
