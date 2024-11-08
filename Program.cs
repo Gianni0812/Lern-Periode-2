@@ -1,28 +1,39 @@
-﻿namespace Hangman
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+
+namespace Hangman
 {
     class Program
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Willkommen zu Hangman");
 
-            string[] Easywords = new string[] { "Hand", "Hund", "Auto", "Baum", "Haus", "Katze", "Wolf", "Apfel", "Banane", "Handy", "Fisch", "Mond", "Sonne", "Tisch", "Buch", "Zug", "Wald", "Ball", "Brot", "Maus", "Affe" };
-            string[] Normalwords = new string[] { "Fenster", "Garten", "Schmetterling", "Geburtstag", "Frühstück", "Computer", "Abenteuer", "Bratpfanne", "Fahrrad", "Regenschirm", "Schlüssel", "Krawatte", "Wasserfall", "Flugzeug", "Schokolade", "Zeitung", "Teleskop", "Briefkasten", "Taschenlampe", "Fotografie" };
-            string[] Hardwords = new string[] { "Enzyklopädie", "Philosophie", "Astronautenanzug", "Thermometer", "Renaissance", "Transkription", "Psychologie", "Wirtschaftswissenschaften", "Katastrophenschutz", "Meteorologie", "Elektrizitätswerk", "Schmetterlingsflügel", "Parallelogramm", "Klimaanlage", "Elektromagnetismus", "Kaffeekanne", "Zentrifugalkraft", "Sauerstoffmaske", "Schwermetallvergiftung", "Gewissensbisse" };
+    
+        static string highscoreFilePath = "highscore.txt";
+        static int highscore = 0;
+        static void Main(string[] args)
+        {    
+
+        
+            Console.WriteLine("Willkommen zu Hangman");
+            LoadHighscore();
+
+            string[] Easywords = { "Hand", "Hund", "Auto", "Baum", "Haus", "Katze", "Wolf", "Apfel", "Banane", "Handy", "Fisch", "Mond", "Sonne", "Tisch", "Buch", "Zug", "Wald", "Ball", "Brot", "Maus", "Affe" };
+            string[] Normalwords = { "Fenster", "Garten", "Schmetterling", "Geburtstag", "Frühstück", "Computer", "Abenteuer", "Bratpfanne", "Fahrrad", "Regenschirm", "Schlüssel", "Krawatte", "Wasserfall", "Flugzeug", "Schokolade", "Zeitung", "Teleskop", "Briefkasten", "Taschenlampe", "Fotografie" };
+            string[] Hardwords = { "Enzyklopädie", "Philosophie", "Astronautenanzug", "Thermometer", "Renaissance", "Transkription", "Psychologie", "Wirtschaftswissenschaften", "Katastrophenschutz", "Meteorologie", "Elektrizitätswerk", "Schmetterlingsflügel", "Parallelogramm", "Klimaanlage", "Elektromagnetismus", "Kaffeekanne", "Zentrifugalkraft", "Sauerstoffmaske", "Schwermetallvergiftung", "Gewissensbisse" };
 
             bool returnGame = true;
             bool difficultyChange = true;
             int versuche = 0;
             int punkte = 0;
-            int highscore = 0;
             string randomWord = "";
+            string schwierigkeit = "";
 
             while (returnGame)
             {
                 if (difficultyChange)
                 {
                     Console.Write("Bitte wählen Sie Ihren Schwierigkeitsgrad (Einfach / Mittel / Schwer): ");
-                    string schwierigkeit = Console.ReadLine();
+                    schwierigkeit = Console.ReadLine();
 
                     switch (schwierigkeit.ToLower())
                     {
@@ -42,6 +53,7 @@
                             Console.WriteLine("Ungültige Eingabe. Bitte versuchen Sie es erneut.");
                             continue;
                     }
+                    difficultyChange = false;
                 }
 
                 Console.Clear();
@@ -119,22 +131,23 @@
                     {
                         Console.Clear();
                         Console.WriteLine($"Herzlichen Glückwunsch! Sie haben das Wort '{randomWord}' erraten.");
-                        Console.Write("Möchten Sie eine andere Schwierigkeit wählen? (Ja/Nein): ");
-                        string antwort = Console.ReadLine().Trim().ToLower();
+                        Console.WriteLine("Wenn Sie bereit sind, drücken Sie Enter, um ein neues Wort zu erraten.");
+                        Console.ReadKey();
 
-                        if (antwort == "ja")
+                        
+                        randomWord = schwierigkeit.ToLower() switch
                         {
-                            difficultyChange = true;
-                            schleife = false;
-                        }
-                        else
-                        {
-                            difficultyChange = false;
-                            schleife = false;
-                        }
+                            "einfach" => Easywords[new Random().Next(Easywords.Length)].ToUpper(),
+                            "mittel" => Normalwords[new Random().Next(Normalwords.Length)].ToUpper(),
+                            "schwer" => Hardwords[new Random().Next(Hardwords.Length)].ToUpper(),
+                            _ => randomWord
+                        };
+
+                        schleife = true; 
                     }
                     else if (verbleibendeVersuche == 0)
                     {
+                        Console.Clear();
                         Console.WriteLine($"Leider haben Sie verloren. Das richtige Wort war '{randomWord}'.");
                         Console.Write("Möchten Sie erneut spielen? (Ja/Nein): ");
                         string erneutSpielen = Console.ReadLine().Trim().ToLower();
@@ -154,7 +167,42 @@
                     }
                 }
             }
+            SaveHighscore();
         }
+        static void LoadHighscore()
+        {
+            if (File.Exists(highscoreFilePath))
+            {
+                try
+                {
+                    string highscoreText = File.ReadAllText(highscoreFilePath);
+                    highscore = int.Parse(highscoreText);
+                }
+                catch
+                {
+                    Console.WriteLine("Fehler beim Laden des Highscores. Der Highscore wird auf 0 gesetzt.");
+                    highscore = 0;
+                }
+            }
+            else
+            {
+                highscore = 0; 
+            }
+        }
+
+       
+        static void SaveHighscore()
+        {
+            try
+            {
+                File.WriteAllText(highscoreFilePath, highscore.ToString());
+            }
+            catch
+            {
+                Console.WriteLine("Fehler beim Speichern des Highscores.");
+            }
+        }
+
         static void ZeichneHangman(int verbleibendeVersuche)
         {
             switch (verbleibendeVersuche)
