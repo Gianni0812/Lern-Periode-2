@@ -18,10 +18,18 @@ Heute habe ich meine Ziele vollständig erreicht. Mein Programm kann jetzt denn 
 Ich habe Heute viel geschaft. Mein Programm läuft und man kann es relativ gut spielen. An manchen Funtionen gibt es noch kleine probleme die ich umbedingt verbessern muss. Aber ich habe heute fast alle Arbeitspakete fertig gemacht.
 
 ## 8.11
-- [ ] Fehler beheben, dass wenn ich ein wort richtig hebe nicht immer das gleiche wieder kommt sondern ein neues.
-- [ ] Denn Highscore im Programm speichern, so dass wenn das Programm geschlossen wird, das der highscore trotzdem bleibt.
-- [ ] Variablen besser bennenen,so das wenn man mein Programm liesst, man besser verstehen kann was ich meine und alles auf englisch steht.
+- [x] Fehler beheben, dass wenn ich ein wort richtig hebe nicht immer das gleiche wieder kommt sondern ein neues.
+- [x] Denn Highscore im Programm speichern, so dass wenn das Programm geschlossen wird, das der highscore trotzdem bleibt.
+- [x] Variablen besser bennenen,so das wenn man mein Programm liesst, man besser verstehen kann was ich meine und alles auf englisch steht.
 - [ ] Das Programm besser gestallten. (Unnötige Funktionen löschen)
+
+Ich bin heute leider nicht mit meinen Arbeitspacketen fertig geworden, da mir das Arbeitspacket 2 viel mühe gemacht hat. Im endefekt habe ich aber viel geschaft un bin stolz das ich es so gut hindbekommen habe.
+
+## 15.11
+- [ ] Das Programm besser gestallten. (Unnötige Funktionen löschen)
+- [ ] Die Console ansprechender gestallten
+- [ ] Nochmals durchgehen ob es probleme gibt
+
       
 ✍️ Heute habe ich... (50-100 Wörter)
 
