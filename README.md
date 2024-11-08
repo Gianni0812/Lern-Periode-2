@@ -20,7 +20,7 @@ Ich habe Heute viel geschaft. Mein Programm läuft und man kann es relativ gut s
 ## 8.11
 - [ ] Fehler beheben, dass wenn ich ein wort richtig hebe nicht immer das gleiche wieder kommt sondern ein neues.
 - [ ] Denn Highscore im Programm speichern, so dass wenn das Programm geschlossen wird, das der highscore trotzdem bleibt.
-- [ ] Variablen besser bennennen
+- [ ] Variablen besser bennenen,so das wenn man mein Programm liesst, man besser verstehen kann was ich meine und alles auf englisch steht.
 - [ ] Das Programm besser gestallten. (Unnötige Funktionen löschen)
       
 ✍️ Heute habe ich... (50-100 Wörter)
