@@ -30,6 +30,15 @@ Ich bin heute leider nicht mit meinen Arbeitspacketen fertig geworden, da mir da
 - [ ] Die Console ansprechender gestallten
 - [ ] Nochmals durchgehen ob es probleme gibt
 
+Ich habe heute viel erreicht. Ich habe meine ziele gut gemeistert und bin bald fertig mit meinem Projekt.
+
+##  22.11
+
+- [ ] Neue Wörter hinzufügen
+- [ ] schwirigkeiten modus hinzufügen wo zwischen leicht und normal ist und zwischen normal und hart.
+- [ ] Das der benutzer eigene Wörter eingeben kann.
+- [ ] Jokers hinzufügen die dem Spieler helfen.
+
       
 ✍️ Heute habe ich... (50-100 Wörter)
 
