@@ -23,56 +23,74 @@ namespace Hangman
 
             bool returnGame = true;
             bool difficultyChange = true;
-            int versuche = 0;
-            int punkte = 0;
+            int trys = 0;
+            int points = 0;
             string randomWord = "";
-            string schwierigkeit = "";
+            string difficulty = "";
 
             while (returnGame)
             {
                 if (difficultyChange)
                 {
-                    Console.Write("Bitte wählen Sie Ihren Schwierigkeitsgrad (Einfach / Mittel / Schwer): ");
-                    schwierigkeit = Console.ReadLine();
+                    Console.Write("Bitte wählen Sie Ihren Schwierigkeitsgrad (");
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.Write("einfach");
+                    Console.ResetColor();
+                    Console.Write("/");
+                    Console.ForegroundColor= ConsoleColor.DarkYellow;
+                    Console.Write("normal");
+                    Console.ResetColor();
+                    Console.Write("/");
+                    Console.ForegroundColor = ConsoleColor.DarkRed;
+                    Console.Write("schwer");
+                    Console.ResetColor();
+                    Console.Write("):");
+                    difficulty = Console.ReadLine();
 
-                    switch (schwierigkeit.ToLower())
+                    switch (difficulty.ToLower())
                     {
                         case "einfach":
                             randomWord = Easywords[new Random().Next(Easywords.Length)].ToUpper();
-                            versuche = 10;
+                            trys = 10;
                             break;
                         case "mittel":
                             randomWord = Normalwords[new Random().Next(Normalwords.Length)].ToUpper();
-                            versuche = 10;
+                            trys = 10;
                             break;
                         case "schwer":
                             randomWord = Hardwords[new Random().Next(Hardwords.Length)].ToUpper();
-                            versuche = 10;
+                            trys = 10;
                             break;
                         default:
+                            Console.ForegroundColor=ConsoleColor.DarkRed; 
                             Console.WriteLine("Ungültige Eingabe. Bitte versuchen Sie es erneut.");
+                            Console.ResetColor();
                             continue;
                     }
                     difficultyChange = false;
                 }
 
                 Console.Clear();
-                bool schleife = true;
+                bool game = true;
 
-                while (schleife)
+                while (game)
                 {
                     char[] striche = new string('-', randomWord.Length).ToCharArray();
                     List<char> falscheBuchstaben = new List<char>();
-                    int verbleibendeVersuche = versuche;
+                    int verbleibendeVersuche = trys;
                     bool gewonnen = false;
 
                     while (verbleibendeVersuche > 0 && !gewonnen)
                     {
                         Console.Clear();
+                        Console.ForegroundColor = ConsoleColor.Green;
                         Console.WriteLine($"Highscore: {highscore}");
-                        Console.WriteLine($"Punkte: {punkte}");
+                        Console.WriteLine($"Punkte: {points}");
+                        Console.ResetColor();
                         Console.WriteLine("\n" + new string(striche));
+                        Console.ForegroundColor = ConsoleColor.DarkRed;
                         Console.WriteLine("Falsche Buchstaben: " + string.Join(", ", falscheBuchstaben));
+                        Console.ResetColor();
                         ZeichneHangman(verbleibendeVersuche);
 
                         Console.Write("Bitte geben Sie einen Buchstaben ein: ");
@@ -82,14 +100,12 @@ namespace Hangman
                             buchstabe = char.ToUpper(Console.ReadLine()[0]);
                             if (!Char.IsLetter(buchstabe))
                             {
-                                Console.WriteLine("Bitte geben Sie nur einen Buchstaben ein.");
                                 continue;
                             }
                         }
                         catch
                         {
-                            Console.WriteLine("Ungültige Eingabe. Bitte geben Sie einen Buchstaben ein!");
-                            continue;
+                          continue;
                         }
 
                         if (randomWord.Contains(buchstabe))
@@ -111,31 +127,35 @@ namespace Hangman
                             }
                             else
                             {
-                                Console.WriteLine("Diesen Buchstaben haben Sie bereits falsch geraten.");
+                                
                             }
                         }
 
                         if (new string(striche) == randomWord)
                         {
                             gewonnen = true;
-                            punkte += 1;
+                            points += 1;
                         }
 
-                        if (highscore < punkte)
+                        if (highscore < points)
                         {
-                            highscore = punkte;
+                            highscore = points;
                         }
                     }
 
                     if (gewonnen)
                     {
                         Console.Clear();
-                        Console.WriteLine($"Herzlichen Glückwunsch! Sie haben das Wort '{randomWord}' erraten.");
+                        Console.Write($"Herzlichen Glückwunsch! Sie haben das Wort ");
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.Write(randomWord );
+                        Console.ResetColor();   
+                        Console.WriteLine(" richtig erraten.");    
                         Console.WriteLine("Wenn Sie bereit sind, drücken Sie Enter, um ein neues Wort zu erraten.");
                         Console.ReadKey();
 
                         
-                        randomWord = schwierigkeit.ToLower() switch
+                        randomWord = difficulty.ToLower() switch
                         {
                             "einfach" => Easywords[new Random().Next(Easywords.Length)].ToUpper(),
                             "mittel" => Normalwords[new Random().Next(Normalwords.Length)].ToUpper(),
@@ -143,26 +163,29 @@ namespace Hangman
                             _ => randomWord
                         };
 
-                        schleife = true; 
+                        game = true; 
                     }
                     else if (verbleibendeVersuche == 0)
                     {
                         Console.Clear();
-                        Console.WriteLine($"Leider haben Sie verloren. Das richtige Wort war '{randomWord}'.");
-                        Console.Write("Möchten Sie erneut spielen? (Ja/Nein): ");
-                        string erneutSpielen = Console.ReadLine().Trim().ToLower();
+                        Console.Write($"Leider haben Sie verloren. Das richtige Wort war: ");
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine(randomWord);
+                        Console.ResetColor();
+                        Console.WriteLine("Möchten Sie erneut spielen? (Ja/Nein): ");
+                        string playAgain = Console.ReadLine().Trim().ToLower();
 
-                        if (erneutSpielen == "ja")
+                        if (playAgain == "ja")
                         {
-                            punkte = 0;
+                            points = 0;
                             difficultyChange = true;
-                            schleife = false;
+                            game = false;
                         }
                         else
                         {
                             Console.WriteLine("Vielen Dank, dass Sie Hangman gespielt haben!");
                             returnGame = false;
-                            schleife = false;
+                            game = false;
                         }
                     }
                 }
@@ -208,6 +231,7 @@ namespace Hangman
             switch (verbleibendeVersuche)
             {
                 case 10:
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("              ");
                     Console.WriteLine("              ");
                     Console.WriteLine("              ");
@@ -215,9 +239,10 @@ namespace Hangman
                     Console.WriteLine("              ");
                     Console.WriteLine("              ");
                     Console.WriteLine("==============");
-
+                    Console.ResetColor();   
                     break;
                 case 9:
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("              ");
                     Console.WriteLine("¦             ");
                     Console.WriteLine("¦             ");
@@ -226,8 +251,10 @@ namespace Hangman
                     Console.WriteLine("¦             ");
                     Console.WriteLine("¦             ");
                     Console.WriteLine("==============");
+                    Console.ResetColor();
                     break;
                 case 8:
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("+-------+     ");
                     Console.WriteLine("¦             ");
                     Console.WriteLine("¦             ");
@@ -236,9 +263,10 @@ namespace Hangman
                     Console.WriteLine("¦             ");
                     Console.WriteLine("¦             ");
                     Console.WriteLine("==============");
-
+                    Console.ResetColor();
                     break;
                 case 7:
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("+-------+     ");
                     Console.WriteLine("¦       ¦     ");
                     Console.WriteLine("¦             ");
@@ -247,8 +275,10 @@ namespace Hangman
                     Console.WriteLine("¦             ");
                     Console.WriteLine("¦             ");
                     Console.WriteLine("==============");
+                    Console.ResetColor();
                     break;
                 case 6:
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("+-------+     ");
                     Console.WriteLine("¦       ¦     ");
                     Console.WriteLine("¦       o     ");
@@ -257,8 +287,11 @@ namespace Hangman
                     Console.WriteLine("¦             ");
                     Console.WriteLine("¦             ");
                     Console.WriteLine("==============");
+                    Console.ResetColor();
                     break;
+
                 case 5:
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("+-------+     ");
                     Console.WriteLine("¦       ¦     ");
                     Console.WriteLine("¦       o     ");
@@ -267,8 +300,10 @@ namespace Hangman
                     Console.WriteLine("¦             ");
                     Console.WriteLine("¦             ");
                     Console.WriteLine("==============");
+                    Console.ResetColor();
                     break;
                 case 4:
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("+-------+     ");
                     Console.WriteLine("¦       ¦     ");
                     Console.WriteLine("¦       o     ");
@@ -277,8 +312,10 @@ namespace Hangman
                     Console.WriteLine("¦             ");
                     Console.WriteLine("¦             ");
                     Console.WriteLine("==============");
+                    Console.ResetColor();
                     break;
                 case 3:
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("+-------+     ");
                     Console.WriteLine("¦       ¦     ");
                     Console.WriteLine("¦       o     ");
@@ -287,8 +324,10 @@ namespace Hangman
                     Console.WriteLine("¦             ");
                     Console.WriteLine("¦             ");
                     Console.WriteLine("==============");
+                    Console.ResetColor();
                     break;
                 case 2:
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("+-------+     ");
                     Console.WriteLine("¦       ¦     ");
                     Console.WriteLine("¦       o     ");
@@ -297,8 +336,10 @@ namespace Hangman
                     Console.WriteLine("¦      /      ");
                     Console.WriteLine("¦             ");
                     Console.WriteLine("==============");
+                    Console.ResetColor();
                     break;
                 case 1:
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("+-------+     ");
                     Console.WriteLine("¦       ¦     ");
                     Console.WriteLine("¦       o     ");
@@ -307,8 +348,10 @@ namespace Hangman
                     Console.WriteLine("¦      / \\   ");
                     Console.WriteLine("¦             ");
                     Console.WriteLine("==============");
+                    Console.ResetColor();
                     break;
                 case 0:
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("+-------+     ");
                     Console.WriteLine("¦       ¦     ");
                     Console.WriteLine("¦       o     ");
@@ -317,6 +360,7 @@ namespace Hangman
                     Console.WriteLine("¦      / \\   ");
                     Console.WriteLine("¦             ");
                     Console.WriteLine("==============");
+                    Console.ResetColor();
                     break;
             }
         }
