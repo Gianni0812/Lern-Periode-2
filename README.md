@@ -30,7 +30,7 @@ Ich bin heute leider nicht mit meinen Arbeitspacketen fertig geworden, da mir da
 - [ ] Die Console ansprechender gestallten
 - [ ] Nochmals durchgehen ob es probleme gibt
 
-Ich habe heute viel erreicht. Ich habe meine ziele gut gemeistert und bin bald fertig mit meinem Projekt.
+Ich habe heute viel erreicht. Ich habe meine ziele gut gemeistert und bin bald fertig mit meinem Projekt. Ich habe die Console ansprechend mit verschiedenen Farben gestalltet. Ich persönlich finde dies ist mir gut gelungen und finde es so zimlich schön. Ich bin das Programm nochmals durchgegangen und habe keinen Fehler gefunden. Das Programm ist nie abgestürzt, wenn ich etwas eingegebne habe was ich nicht sollte und das Programm lief so wie ich es wollte. Ich habe auch nach unnötigen funktionen gesuch, die ich nicht benötife, und auch dort nicht wirklich was gefunden nur kleinichkeiten.
 
 ##  22.11
 
