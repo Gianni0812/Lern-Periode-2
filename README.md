@@ -34,12 +34,19 @@ Ich habe heute viel erreicht. Ich habe meine ziele gut gemeistert und bin bald f
 
 ##  22.11
 
-- [ ] Neue Wörter hinzufügen
-- [ ] schwirigkeiten modus hinzufügen wo zwischen leicht und normal ist und zwischen normal und hart.
+- [X] Neue Wörter hinzufügen
+- [X] schwirigkeiten modus hinzufügen wo zwischen leicht und normal ist und zwischen normal und hart.
 - [ ] Das der benutzer eigene Wörter eingeben kann.
 - [ ] Jokers hinzufügen die dem Spieler helfen.
 
-      
+Ich habe heute nicht alle arbeitspackete geschaft. Ich habe aber neue Wörter hinzugefügt und habe auch zwei neue Schwierigkeitsgrade hinzugefügt. ICh habe mich an den Joker rangemacht, musste aber schnell feststellen das es viele problemme gibt wenn ich einen Hinzufüge. Zumbeispiel wollte ich es zuerst so programmiern, dass man Joker eingeben kann und dann ein Joker eingelösst wird. Jedoch ist das nicht so einfach, da ich alles mit einem char gemacht habe und wenn ich ein wort eingebe wird nur der anfangsbuchstabe eingelesen. Ich habe mich also in der letzten Selbständiem Arbeiten, damit beschäftigt wie ich das am besten machen kann. 
+
+## 29.11
+- [ ] Das der benutzer eigene Wörter eingeben kann.
+- [ ] Jokers hinzufügen die dem Spieler helfen.
+- [ ] Punkte System erweitern (mehr punkte bei wenigern Fehlern)
+- [ ] Zeit hinzufügen für Zeitdruck.
+
 ✍️ Heute habe ich... (50-100 Wörter)
 
 ☝️ Vergessen Sie nicht, bis einen ersten Code auf github hochzuladen
