@@ -17,9 +17,12 @@ namespace Hangman
             Console.WriteLine("Willkommen zu Hangman");
             LoadHighscore();
 
-            string[] Easywords = { "Hand", "Hund", "Auto", "Baum", "Haus", "Katze", "Wolf", "Apfel", "Banane", "Handy", "Fisch", "Mond", "Sonne", "Tisch", "Buch", "Zug", "Wald", "Ball", "Brot", "Maus", "Affe" };
+            string[] Easywords = { "Hand", "Hund", "Auto", "Baum", "Haus", "Katze", "Wolf", "Apfel", "Banane", "Handy", "Fisch", "Mond", "Sonne", "Tisch", "Buch", "Zug", "Wald", "Ball", "Brot", "Maus" };
+            string[] MediumWords = { "Lampe", "Keller", "Fenster", "Koffer", "Kamera", "Wecker", "Brücke", "Gabel", "Zahnarzt", "Erdbeere", "Wand", "Lehrer", "Zugfahrt", "Freund", "Dorf", "Schule", "Löffel", "Wolke", "Uhrwerk", "Stadt" };
             string[] Normalwords = { "Fenster", "Garten", "Schmetterling", "Geburtstag", "Frühstück", "Computer", "Abenteuer", "Bratpfanne", "Fahrrad", "Regenschirm", "Schlüssel", "Krawatte", "Wasserfall", "Flugzeug", "Schokolade", "Zeitung", "Teleskop", "Briefkasten", "Taschenlampe", "Fotografie" };
+            string[] AdvancedWords = { "Dachboden", "Wassermelone", "Telefonzelle", "Sandkasten", "Tiefgarage", "Dachschaden", "Hausmeister", "Buchhandlung", "Feuerwehr", "Geschirrspüler", "Kopfkissen", "Rettungswagen", "Waschmaschine", "Kabelsalat", "Verkehrsmittel", "Straßenlaterne", "Bilderrahmen", "Notausgang", "Gebäudereiniger", "Fensterbank" };
             string[] Hardwords = { "Enzyklopädie", "Philosophie", "Astronautenanzug", "Thermometer", "Renaissance", "Transkription", "Psychologie", "Wirtschaftswissenschaften", "Katastrophenschutz", "Meteorologie", "Elektrizitätswerk", "Schmetterlingsflügel", "Parallelogramm", "Klimaanlage", "Elektromagnetismus", "Kaffeekanne", "Zentrifugalkraft", "Sauerstoffmaske", "Schwermetallvergiftung", "Gewissensbisse" };
+
 
             bool returnGame = true;
             bool difficultyChange = true;
@@ -37,8 +40,16 @@ namespace Hangman
                     Console.Write("einfach");
                     Console.ResetColor();
                     Console.Write("/");
+                    Console.ForegroundColor = ConsoleColor.DarkCyan;
+                    Console.Write("mittel");
+                    Console.ResetColor();
+                    Console.Write("/");
                     Console.ForegroundColor= ConsoleColor.DarkYellow;
                     Console.Write("normal");
+                    Console.ResetColor();
+                    Console.Write("/");
+                    Console.ForegroundColor = ConsoleColor.Magenta;
+                    Console.Write("fortgeschritten");
                     Console.ResetColor();
                     Console.Write("/");
                     Console.ForegroundColor = ConsoleColor.DarkRed;
@@ -53,12 +64,20 @@ namespace Hangman
                             randomWord = Easywords[new Random().Next(Easywords.Length)].ToUpper();
                             trys = 10;
                             break;
-                        case "mittel":
+                        case "normal":
                             randomWord = Normalwords[new Random().Next(Normalwords.Length)].ToUpper();
                             trys = 10;
                             break;
                         case "schwer":
                             randomWord = Hardwords[new Random().Next(Hardwords.Length)].ToUpper();
+                            trys = 10;
+                            break;
+                        case "mittel":
+                            randomWord = MediumWords[new Random().Next(MediumWords.Length)].ToUpper();
+                            trys = 10;
+                            break;
+                        case "fortgeschritten":
+                            randomWord = AdvancedWords[new Random().Next(AdvancedWords.Length)].ToUpper();
                             trys = 10;
                             break;
                         default:
@@ -348,6 +367,7 @@ namespace Hangman
                     Console.WriteLine("¦      / \\   ");
                     Console.WriteLine("¦             ");
                     Console.WriteLine("==============");
+                    Console.WriteLine("LETZTER VERSUCH!");
                     Console.ResetColor();
                     break;
                 case 0:
