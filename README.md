@@ -26,9 +26,9 @@ Ich habe Heute viel geschaft. Mein Programm läuft und man kann es relativ gut s
 Ich bin heute leider nicht mit meinen Arbeitspacketen fertig geworden, da mir das Arbeitspacket 2 viel mühe gemacht hat. Im endefekt habe ich aber viel geschaft un bin stolz das ich es so gut hindbekommen habe.
 
 ## 15.11
-- [ ] Das Programm besser gestallten. (Unnötige Funktionen löschen)
-- [ ] Die Console ansprechender gestallten
-- [ ] Nochmals durchgehen ob es probleme gibt
+- [x] Das Programm besser gestallten. (Unnötige Funktionen löschen)
+- [x] Die Console ansprechender gestallten
+- [x] Nochmals durchgehen ob es probleme gibt
 
 Ich habe heute viel erreicht. Ich habe meine ziele gut gemeistert und bin bald fertig mit meinem Projekt. Ich habe die Console ansprechend mit verschiedenen Farben gestalltet. Ich persönlich finde dies ist mir gut gelungen und finde es so zimlich schön. Ich bin das Programm nochmals durchgegangen und habe keinen Fehler gefunden. Das Programm ist nie abgestürzt, wenn ich etwas eingegebne habe was ich nicht sollte und das Programm lief so wie ich es wollte. Ich habe auch nach unnötigen funktionen gesuch, die ich nicht benötife, und auch dort nicht wirklich was gefunden nur kleinichkeiten.
 
@@ -42,10 +42,18 @@ Ich habe heute viel erreicht. Ich habe meine ziele gut gemeistert und bin bald f
 Ich habe heute nicht alle arbeitspackete geschaft. Ich habe aber neue Wörter hinzugefügt und habe auch zwei neue Schwierigkeitsgrade hinzugefügt. ICh habe mich an den Joker rangemacht, musste aber schnell feststellen das es viele problemme gibt wenn ich einen Hinzufüge. Zumbeispiel wollte ich es zuerst so programmiern, dass man Joker eingeben kann und dann ein Joker eingelösst wird. Jedoch ist das nicht so einfach, da ich alles mit einem char gemacht habe und wenn ich ein wort eingebe wird nur der anfangsbuchstabe eingelesen. Ich habe mich also in der letzten Selbständiem Arbeiten, damit beschäftigt wie ich das am besten machen kann. 
 
 ## 29.11
-- [ ] Das der benutzer eigene Wörter eingeben kann.
+- [X] Das der benutzer eigene Wörter eingeben kann.
 - [ ] Jokers hinzufügen die dem Spieler helfen.
 - [ ] Punkte System erweitern (mehr punkte bei wenigern Fehlern)
 - [ ] Zeit hinzufügen für Zeitdruck.
+
+Ich war heute sehr Produktiv. Ich habe mir heute Sponntan ein neues Arbeitspacket gemacht. Ich habe ein neues Programm erstellt und meinen gesamten Code noch einmal überarbeitet. Ich habe jetzt ein Menu und habe alle Funktionen in Methoden gepackt. So ist mein Code jetzt übersichtlicher und ich muss nicht alles 100mal eingeben. Aber bis auf eigene Wörter eingeben blieb mir so keine Zeit mehr um die restlichen Arbeitspackete zu bearbeiten. Deshalb werde ich diese Jetzt auf nächste Woche schieben.
+
+## 6.12
+- [ ] Jokers hinzufügen die dem Spieler helfen.
+- [ ] Punkte System erweitern (mehr punkte bei wenigern Fehlern)
+- [ ] Zeit hinzufügen für Zeitdruck.
+- [ ] Die Console besser gestalten (mit Farben) und Logerische anforderungen machen für den User
 
 ✍️ Heute habe ich... (50-100 Wörter)
 
