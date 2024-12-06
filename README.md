@@ -50,10 +50,17 @@ Ich habe heute nicht alle arbeitspackete geschaft. Ich habe aber neue Wörter hi
 Ich war heute sehr Produktiv. Ich habe mir heute Sponntan ein neues Arbeitspacket gemacht. Ich habe ein neues Programm erstellt und meinen gesamten Code noch einmal überarbeitet. Ich habe jetzt ein Menu und habe alle Funktionen in Methoden gepackt. So ist mein Code jetzt übersichtlicher und ich muss nicht alles 100mal eingeben. Aber bis auf eigene Wörter eingeben blieb mir so keine Zeit mehr um die restlichen Arbeitspackete zu bearbeiten. Deshalb werde ich diese Jetzt auf nächste Woche schieben.
 
 ## 6.12
-- [ ] Jokers hinzufügen die dem Spieler helfen.
-- [ ] Punkte System erweitern (mehr punkte bei wenigern Fehlern)
-- [ ] Zeit hinzufügen für Zeitdruck.
+- [x] Jokers hinzufügen die dem Spieler helfen.
+- [X] Punkte System erweitern (mehr punkte bei wenigern Fehlern)
+- [X] Zeit hinzufügen für Zeitdruck.
 - [ ] Die Console besser gestalten (mit Farben) und Logerische anforderungen machen für den User
+
+Ich habe heute fast all meine arbeitspackete fertig und bin zufrieden mit meiner arbeit. Ich habe zuerst die Jokers hinzugefügt. Man kann jetzt mit der taste 2 einen Joker ausführen und so wird ein zufälliger Buchstabe aufgedeckt. Man hat 3 pro Spiel zur verfügung. Dann habe ich eine Zeit hinzugefügt die je nach schwierigkeitsgrad höher oder tiefer ist. Von 1min bis zu 3min. Dann Habe ich das Punkte System übrarbeitet. Man bekommt bei jedem schwierigkeitsgrad verschieden Punkte, bei schneller Zeit und bei wenigen Fehlern. Bei der überarbeitung der Console und logische Anforderungen machen, hatte ich eine Idee. Ich habe ein Info Büchlein angefangen, bei dem der Benutzer nachschauen kann und alles erklärt wird.
+
+## 13.12
+- [ ] Info Büchlein fertig machen.
+- [ ] Program abschliessen
+- [ ] AoC machen
 
 ✍️ Heute habe ich... (50-100 Wörter)
 
