@@ -58,9 +58,17 @@ Ich war heute sehr Produktiv. Ich habe mir heute Sponntan ein neues Arbeitspacke
 Ich habe heute fast all meine arbeitspackete fertig und bin zufrieden mit meiner arbeit. Ich habe zuerst die Jokers hinzugefügt. Man kann jetzt mit der taste 2 einen Joker ausführen und so wird ein zufälliger Buchstabe aufgedeckt. Man hat 3 pro Spiel zur verfügung. Dann habe ich eine Zeit hinzugefügt die je nach schwierigkeitsgrad höher oder tiefer ist. Von 1min bis zu 3min. Dann Habe ich das Punkte System übrarbeitet. Man bekommt bei jedem schwierigkeitsgrad verschieden Punkte, bei schneller Zeit und bei wenigen Fehlern. Bei der überarbeitung der Console und logische Anforderungen machen, hatte ich eine Idee. Ich habe ein Info Büchlein angefangen, bei dem der Benutzer nachschauen kann und alles erklärt wird.
 
 ## 13.12
-- [ ] Info Büchlein fertig machen.
+- [x] Info Büchlein fertig machen.
 - [ ] Program abschliessen
-- [ ] AoC machen
+- [x] AoC machen
+
+Ich habe Heute mein Info Büchlein fertig gemacht und das Programm nochmals durchgeschaut, das alles perfekt läuft. Mir sind dann Fehler aufgefallen, wie z.B das während dem Spiel die Console geflackert hat. Ich habe dies dann in einem anderem Programm probiert und hatte dann aber keine lust mehr. Ich habe angefangen mit dem AOC tag 13. Es war nicht so einfach, also habe ich die ganze Zeit damit verbracht, dass ich dies Probleme lösen kann.
+
+## 20.12
+- [ ] Code nochmals überarbeiten
+- [ ] AoC
+
+
 
 ✍️ Heute habe ich... (50-100 Wörter)
 
