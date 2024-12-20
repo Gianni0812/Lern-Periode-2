@@ -68,8 +68,8 @@ Ich habe Heute mein Info Büchlein fertig gemacht und das Programm nochmals durc
 - [ ] Code nochmals überarbeiten
 - [ ] AoC
 
+## Fertiges Projekt
 
+Ich habe in dieser Periode zum ersten mal ein Spiel programmiert. Ich habe ein Hangmann Spiel programmiert. In meinem Hangamnn Spiel hat man ein Menu, dass man verschiede Dinge ausführen kann.
+![Screenshot 2024-12-20 094815](https://github.com/user-attachments/assets/7418bbda-2d77-4cc9-bc35-b3ce8acebcc1)
 
-✍️ Heute habe ich... (50-100 Wörter)
-
-☝️ Vergessen Sie nicht, bis einen ersten Code auf github hochzuladen
