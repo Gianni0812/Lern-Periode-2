@@ -70,7 +70,22 @@ Ich habe Heute mein Info Büchlein fertig gemacht und das Programm nochmals durc
 
 ## Fertiges Projekt
 
-Ich habe in dieser Periode zum ersten mal ein Spiel programmiert. Ich habe ein Hangmann Spiel programmiert. In meinem Hangamnn Spiel hat man ein Menu, dass man verschiede Dinge ausführen kann.
+Ich habe in dieser Periode zum ersten Mal ein Spiel programmiert, und zwar ein Hangman-Spiel. In meinem Hangman-Spiel gibt es ein Menü, mit dem man verschiedene Funktionen nutzen kann. Zum Beispiel kann man den Schwierigkeitsgrad auf Einfach, Mittel, Normal, Fortgeschritten oder Hard einstellen. Der Benutzer hat auch die Möglichkeit, eigene Wörter für seine Freunde einzugeben und diese im Spiel zu verwenden. Zu meinem Programm habe ich ausserdem ein Info-Büchlein erstellt, das erklärt, wie man das Spiel richtig bedient. Im Spiel wird ein zufälliges Wort aus dem ausgewählten Schwierigkeitsgrad ausgewählt und in Form von Strichen angezeigt. Gibt man einen falschen Buchstaben ein, wird dieser angezeigt, und das Hangman-Männchen wird Stück für Stück weiter aufgebaut. Wenn man nicht mehr weiterkommt, stehen drei Joker zur Verfügung, die einen zufälligen, noch nicht aufgedeckten Buchstaben anzeigen. Hat man ein Wort richtig erraten, erhält man Punkte, die im Highscore gespeichert werden, wenn sie höher sind als der bisherige Highscore.
 
-[Screenshot 2024-12-20 094815](https://github.com/user-attachments/assets/7418bbda-2d77-4cc9-bc35-b3ce8acebcc1)
+![Screenshot 2024-12-20 094815](https://github.com/user-attachments/assets/f5f7dae5-ac8e-4bd7-9193-e1249707b139)
+
+![Screenshot 2024-12-20 100925](https://github.com/user-attachments/assets/f815381c-d99f-42c0-8cc1-35eb4d93c222)
+
+![Screenshot 2024-12-20 100948](https://github.com/user-attachments/assets/1b39b495-7439-4c52-88ee-577091234843)
+
+![Screenshot 2024-12-20 101007](https://github.com/user-attachments/assets/c1e28e5f-bfb5-46d6-a9a2-78abec22da35)
+
+![Screenshot 2024-12-20 101155](https://github.com/user-attachments/assets/ee6e3287-3ab4-422e-8788-1a7d5ae5bacb)
+
+## Reflexion
+Ich war anfangs nicht sicher, was ich machen möchte, und war unschlüssig. Ich wusste nur, dass ich ein eigenes Spiel programmieren wollte. Dann kam mir die Idee, ein Hangman-Spiel zu programmieren, und ich habe mich daran gemacht. Anfangs war es ziemlich schwer und ungewohnt. Ich habe mir viele Dinge in meine Arbeitspakete geschrieben, ohne genau zu wissen, wie sie funktionieren. Ich hatte immer eine Idee, wie ich es umsetzen könnte, aber es hat nie so funktioniert, wie ich es wollte.
+Als ich mich dann intensiver damit auseinandergesetzt habe, hat es plötzlich geklappt, und mein Programm war fertig. So wie es war, hat es mir jedoch nicht gefallen. Ich habe also ein neues Projekt hinzugefügt, das gesamte Programm überarbeitet, ein Menü integriert und verschiedene Funktionen hinzugefügt. Jetzt bin ich sehr zufrieden mit meinem Projekt. Ich habe viel dabei gelernt, vor allem über Funktionen.
+An meinem Projekt hatte ich viel Spass und bin sehr zufrieden mit meinem Ergebnis.
+
+
 
