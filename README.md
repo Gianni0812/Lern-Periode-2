@@ -71,5 +71,6 @@ Ich habe Heute mein Info Büchlein fertig gemacht und das Programm nochmals durc
 ## Fertiges Projekt
 
 Ich habe in dieser Periode zum ersten mal ein Spiel programmiert. Ich habe ein Hangmann Spiel programmiert. In meinem Hangamnn Spiel hat man ein Menu, dass man verschiede Dinge ausführen kann.
-![Screenshot 2024-12-20 094815](https://github.com/user-attachments/assets/7418bbda-2d77-4cc9-bc35-b3ce8acebcc1)
+
+[Screenshot 2024-12-20 094815](https://github.com/user-attachments/assets/7418bbda-2d77-4cc9-bc35-b3ce8acebcc1)
 
